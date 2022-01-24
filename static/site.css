@@ -1,0 +1,137 @@
+html{
+    font-family: 'Klee One', cursive;
+}
+
+body{
+    margin: 0px;
+    background-image: url("images/3.jpg");
+    background-size: 100%;
+    font-family: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+.div1{
+    height: 30%;
+    width: 15%;
+    margin-left: 5%;
+    margin-top: 2%;
+    display: grid;
+    justify-content: center;
+}
+
+.div_11{
+    justify-content: right;
+    height: 80%;
+}
+
+.div2{
+    background-color: white;
+    width: 33%;
+    height: 70%;
+    margin-right: 3.5%;
+    margin-top: 1.5%;
+}
+
+.div_22{
+    height: 80%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.input1{
+    border-radius: 20px;
+    height: 60%;
+    padding:3px;
+    box-sizing:border-box;
+    font-size: 16px;
+    font-family: inherit;
+    margin-bottom: 4%;
+    background-color: #FEF5ED;
+    border: solid;
+    border-width: 1.5px;
+}
+
+.bbutton{
+    border: none;
+    font-size: inherit;
+    background-color: #E4FBFF;
+    font-weight: bold;
+    border-radius:20px;
+    color: #334257;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.bbutton:hover{
+    background-color: #F6D7A7;
+}
+
+.p1{
+    margin: 0px;
+    font-size: large;
+    color: floralwhite;
+}
+
+.border_{
+    border: dashed;
+    border-width: 1.6px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-color: black;
+}
+
+.input2{
+    border: none;
+    width: 25%;
+    height: 8%;
+    font-family: inherit;
+    height: 70%;
+}
+
+.inner_container{
+    display: flex;
+}
+
+.name{
+    border-radius: 50%;
+    background-color: #FFE162;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    height: 50px;
+    width: 90px;
+}
+
+.chat{
+    margin-left: 1%;
+    width: fit-content;
+}
+
+.first{
+    margin-top: 2px;
+}
+
+.form_textarea{
+    border-radius: 2.5%;
+    width:100%;
+    padding: 5px;
+    box-sizing:border-box;
+    height: 30%;
+    font-size: 18px;
+    font: inherit;
+    background-color: #88FFF7;  
+    margin-bottom: 10px;
+}
+
+.form_div{
+    display: flex;
+    justify-content: space-between; 
+    height: 12%;
+}
+
+.mid_div{
+    height: 100%;
+    width: 30%;
+    padding-top: 2%;
+}

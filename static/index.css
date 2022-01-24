@@ -1,0 +1,86 @@
+html{
+    font-family: 'Klee One', cursive;
+  }
+
+body{
+    background-image: url("images/1.jpg");
+    background-size: 100%;
+    margin:0%;
+    font-family: inherit;
+    justify-content: center;
+    display: flex;
+  }
+
+.div1{
+    justify-content: center;
+    height: 40%;
+    width: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: grid;
+    font-family: inherit;
+}
+
+form{
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 0px;
+    display: grid;
+    font-family: inherit;
+}
+
+.p1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+.p2{
+    display: grid;
+    justify-content: center;
+    border: dashed;
+    border-width: 1.6px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding-top: 10px;
+    margin-bottom: 6px;
+}
+
+.input1{
+        border-radius: 20px;
+        margin-top: 5%;
+        height: 60%;
+        padding:3px;
+        box-sizing:border-box;
+        font-size: 16px;
+        font-family: inherit;
+        margin-bottom: 8%;
+        background-color: #FEF5ED;
+        border: solid;
+        border-width: 1.5px;
+}
+
+
+.form_submit{
+        border: none;
+        font-size: inherit;
+        background-color: #E4FBFF;
+        font-weight: bold;
+        border-radius:20px;
+        color: #334257;
+        cursor: pointer;
+        font-family: inherit;
+      }
+.form_submit:hover{
+        background-color: #F6D7A7;
+      }
+
+.no_user{
+    text-align: center;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+    margin: 0px;
+    background-color: #DD4A48;
+}

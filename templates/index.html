@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Live-chat</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="div1">
+            <input id="email" class="input1" type="text" name="email" placeholder="Enter Email" required>
+            <input id="password" class="input1" type="password" name="password" placeholder="Enter Password" required>
+            <p class="p1">
+                <button id="login" class="form_submit" name="button" value="login" type="submit">Login</button>
+                <button class="form_submit" name="button" value="reset" type="submit" onclick="location.href='/forgot_pass'">Password Reset</button>
+                <p id="worng_password" style="margin: 0px; margin-bottom: 0px;"></p>
+                <p class="p2">New to live-chat ?</p>
+                <button id="sign_up" class="form_submit" name="button" value="signup" type="submit" onclick="location.href='/sign_up'">Sign Up</button>
+            </p>
+            <p class="no_user" hidden></p>
+    </div>
+
+    <script>
+            $("#login").click(function(event){
+            event.preventDefault();
+            $.ajax({
+                            url: '/check_password',
+                            // data: $('form').serialize(),
+                            data:{
+                                "email": $("#email").val(),
+                                "password": $("#password").val(),
+                            },
+                            type: 'POST',
+                            success: function(data){
+                                    if(data == "1"){
+                                        s = "User Not Found";
+                                        $(".no_user").text(s).show().fadeOut(1500);
+                                    }
+                                    else if(data == "2"){   
+                                        location.href = "/login";
+                                    }
+                                    else{
+                                        s = "Wrong Password";
+                                        $(".no_user").text(s).show().fadeOut(1500);
+                                    }
+                                },
+                            error: function(error) {
+                                    console.log(error);
+                                }
+                        });
+            });
+
+    </script>
+</body>
+</html>

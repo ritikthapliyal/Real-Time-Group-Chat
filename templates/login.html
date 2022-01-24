@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="div1">
+            <input id="room_id" class="input1" type="text" name="room_id" placeholder="Enter Room-ID" >
+            <p class="p1">
+                <button id="enter_room" class="form_submit" name="button" value="enter" type="submit">Enter Room</button>
+                <p class="p2">Create a New-Room</p>
+                <button id="create_room" class="form_submit" name="button" value="create" type="submit">Create Room</button>
+            </p>
+            <p class="no_user" hidden></p> 
+    </div>
+
+    <script>
+        $("#create_room").click(function(event){
+            event.preventDefault();
+            $.ajax({
+                            url: '/create_room',
+                            // data: $('form').serialize(),
+                            type: 'POST',
+                            success: function(data){
+                                    location.href = "/site";
+                                },
+                            error: function(error) {
+                                    console.log(error);
+                                }
+                        });
+            });
+
+            $("#enter_room").click(function(event){
+            event.preventDefault();
+            $.ajax({
+                            url: '/enter_room',
+                            // data: $('form').serialize(),
+                            data:{
+                                "room_id" : $("#room_id").val()
+                            },
+                            type: 'POST',
+                            success: function(data){
+                                    if(data == "0"){
+                                        location.href = "/site";
+                                    }
+                                    else if(data == "1"){
+                                        s = "Room Full"
+                                        $(".no_user").text(s).show().fadeOut(1500);
+                                    }
+                                    else{
+                                        s = "Room ID Not Valid"
+                                        $(".no_user").text(s).show().fadeOut(1500);
+                                    }
+                                    
+                                },
+                            error: function(error) {
+                                    console.log(error);
+                                }
+                        });
+            });
+
+    </script>
+</body>
+</html>
